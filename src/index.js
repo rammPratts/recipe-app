@@ -1,5 +1,6 @@
 import uuidv4 from "uuidv4"
-import {Recipe, getSavedRecipes} from "./recipe"
+import {Recipe} from "./recipe"
+import {getSavedRecipes} from "./recipe-functions"
 
 const newRecipeButton = document.querySelector("#new-recipe")
 
