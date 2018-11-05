@@ -44,6 +44,7 @@ if (saveRecipeElement) {
         e.preventDefault()
         saveRecipe(recipes, recipeIndex, recipeTitleElement, recipeTextElement)
         renderIngridients(recipeIndex)
+        location.assign("/")
     })
 }
 
@@ -54,5 +55,23 @@ if (saveIngridientElement) {
         e.preventDefault()
         saveIngridient(recipes, recipeIndex)
         renderIngridients(recipes, recipeIndex)
+    })
+}
+
+if (document.querySelector("#return-button")) {
+    document.querySelector("#return-button").addEventListener("click", e => {
+        e.preventDefault()
+        location.assign("/")
+    })
+}
+
+if (document.querySelector("#delete-recipe")) {
+    document.querySelector("#delete-recipe").addEventListener("click", e => {
+        e.preventDefault()
+        const deletedRecipe = recipes.splice(recipeIndex, 1)
+        saveRecipes(recipes)
+        location.assign("/")
+        console.log(deletedRecipe)
+        console.log(recipes)
     })
 }
