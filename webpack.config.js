@@ -2,8 +2,9 @@ const path = require('path')
 
 module.exports = {
     entry: {
-        index: ["babel-polyfill",'./src/index.js'],
-        recipe: ["babel-polyfill",'./src/recipe.js']
+        index: ["babel-polyfill", './src/index.js'],
+        recipe: ["babel-polyfill", './src/recipe.js'],
+        viewrecipe: ["babel-polyfill", './src/view-recipe.js']
     },
     output: {
         path: path.resolve(__dirname, 'public/scripts'),
@@ -28,5 +29,5 @@ module.exports = {
     devtool: "source-map",
     node: {
         fs: 'empty'
-      }
+    }
 }
