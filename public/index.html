@@ -5,21 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/index.css">
     <title>Recipe App</title>
 </head>
 
 <body>
-    <h1>Recipe App</h1>
-    <input type="search" placeholder="Search recipe" id="recipe-search">
-    <button id="new-recipe">New recipe</button>
-
-    <div id="recipes-container">
-        <ul id="recipes">
-
-        </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper purple darken-4">
+                <a href="/" class="brand-logo center">Recipe App</a>
+                <ul class="right">
+                    <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" id="new-recipe">
+                        <i class="material-icons">add</i>
+                    </a>
+                </ul>
+            </div>
+        </nav>
     </div>
 
+    <div class="container">
+        <input class="col" type="search" placeholder="Search recipe" id="recipe-search">
+
+        <div id="recipes-container">
+
+        </div>
+    </div>
+
+    <footer class="page-footer  purple darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s8 offset-2">
+                    <p>This is a simple recipe app made for fun and to practise a bit of Javascript. 🙂 </p>
+                    <p>Made by Ramiro Meneses</p>
+                    <p> <i class="material-icons left">contact_mail</i> Contact: rampratts@gmail.com</p>
+                    <p>🐱 <a href="https://github.com/rammPratts/recipe-app" class="white-text" target="_blank">GitHub
+                            Repository</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="scripts/index-bundle.js"></script>
+    <script src="scripts/materialize.min.js"></script>
 </body>
 
 </html>

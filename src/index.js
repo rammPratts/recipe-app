@@ -23,14 +23,19 @@ if (recipes.length === 0) {
 }
 
 recipes.forEach(element => {
-    const container = document.querySelector("#recipes")
-    const liElement = document.createElement("li")
+    const container = document.querySelector("#recipes-container")
+    const liElement = document.createElement("div")
     const nameElement = document.createElement("h3")
     const ingridientsLeft = document.createElement("h4")
     const viewButton = document.createElement("button")
     const editButton = document.createElement("button")
+    const divider = document.createElement("div")
+
 
     const recipe = element
+
+    divider.classList.add("divider")
+    liElement.classList.add("section")
 
     nameElement.textContent = recipe.name
 
@@ -43,17 +48,20 @@ recipes.forEach(element => {
     }
 
     viewButton.textContent = "View Recipe"
+    viewButton.classList.add("btn", "waves-effect", "waves-light")
     viewButton.addEventListener("click", e => {
         e.preventDefault()
         location.assign(`/view-recipe.html#${recipe.id}`)
     })
 
     editButton.textContent = "Edit Recipe"
+    editButton.classList.add("btn", "waves-effect", "waves-light")
     editButton.addEventListener("click", e => {
         e.preventDefault()
         location.assign(`/add-recipe.html#${recipe.id}`)
     })
 
+    liElement.appendChild(divider)
     liElement.appendChild(nameElement)
     liElement.appendChild(ingridientsLeft)
     liElement.appendChild(viewButton)

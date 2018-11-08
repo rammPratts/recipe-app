@@ -38,11 +38,6 @@ ingridients.forEach(element => {
     ingridientsElement.appendChild(liElement)
 })
 
-document.querySelector("#return-button").addEventListener("click", (e) => {
-    e.preventDefault()
-    location.assign("/")
-})
-
 document.querySelector("#edit-recipe").addEventListener("click", (e) => {
     e.preventDefault()
     location.assign(`add-recipe.html#${recipeId}`)
